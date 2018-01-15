@@ -43,13 +43,19 @@ function getCorrectHeroFromGetVariable() {
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="css/stars.css" />
         <link rel="stylesheet" href="css/style.css" />
+
+        <link rel="icon" href="img/icon/favicon.png" />
+        <link href="img/icon/favicon.png" rel="icon" />
+        <link href="img/icon/favicon.png" rel="shortcut icon" />
+        <link href="img/icon/favicon.png" rel="apple-touch-icon" />
+
         <title>DC Heros</title>
     </head>
     <body>
 
         <header id="header">
             <div class="logo">
-                <a href="/" class='nicefont'>(DC)Heroes</a>
+                <a href="/" class='nicefont'><img src="img/icon/transparent.png" />Heroes</a>
             </div>
         </header>
 

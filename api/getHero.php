@@ -15,12 +15,15 @@ foreach ($things as $hero) {
     foreach ($rating as $rate) {
         $totalRate += $rate->rating;
     }
-    //var_dump($rating, strftime("%d%m%G"));
+    $yellowStars = 0;
+    if($totalRate != 0) {
+//    var_dump($rating, strftime("%d%m%G"));
 //    $yellowStars = round($totalRate / 10 * 5);
-    //var_dump(count($rating));
-    $yellowStars = round($totalRate / count($rating));
-    if($yellowStars > 5)
-        $yellowStars = round($yellowStars / count($rating));
+        //var_dump(count($rating));
+        $yellowStars = round($totalRate / count($rating));
+        if ($yellowStars > 5)
+            $yellowStars = round($yellowStars / 10 * 5);
+    }
     $blackStars = 5 - $yellowStars;
     $stars = "";
     for($i = 1; $i <= $yellowStars; $i ++) {

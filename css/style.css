@@ -20,10 +20,13 @@ body {
 #header .logo a:hover {
     color: antiquewhite;
 }
+#header .logo a img {
+    float: left;
+}
 #header .logo a {
     font-size: 40px;
     position: relative;
-    top: 20px;
+    top: 30px;
     color: whitesmoke;
     text-decoration: none;
 }
