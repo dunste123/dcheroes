@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css?family=IM+Fell+Great+Primer');
+body {
+    margin: 0;
+    overflow-y: hidden;
+    font-family: 'IM Fell Great Primer', serif;
+}
+
+.nicefont {
+    font-family: anudawregular, 'Comic Sans MS';
+}
+
+#header {
+    height: 100px;
+    border-top: 20px solid deepskyblue;
+    padding: 20px;
+    background: dodgerblue;
+    color: whitesmoke;
+}
+
+#header .logo a:hover {
+    color: antiquewhite;
+}
+#header .logo a {
+    font-size: 40px;
+    position: relative;
+    top: 20px;
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+#main-container {
+    height: calc(100vh - 163px);
+}
+
+.col {
+    height: 100%;
+    /*width: 300px;*/
+    float: left;
+    width: calc( 100vw / 3 - 2px);
+    border: 1px solid black;
+}
+
+#main-left {
+    width: 15%;
+}
+
+#main-center {
+    width: 30%;
+    overflow-y: scroll;
+}
+
+.hero {
+    margin: 5px;
+    display: block;
+}
+.hero .image {
+    float: left;
+}
+.hero .image img {
+    height: 250px;
+    max-width: 164px;
+}
+.hero .description {
+    text-align: center;
+    float: left;
+    background: dimgray;
+    height: 250px;
+    width: 250px;
+    /*width: 62%;*/
+}
+.hero .description h3 {
+    color: dodgerblue;
+}
+.hero .description p {
+    color: white;
+    width: 200px;
+    white-space: nowrap;
+    text-align: center;
+    margin: 20px auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.hero .description a {
+    text-align: center;
+    display: block;
+    color: white;
+    text-decoration: none;
+    background: dodgerblue;
+    width: 100px;
+    margin: 0 auto;
+    border-radius: 20px;
+    padding: 10px 20px
+}
+.hero .description a:hover {
+    background: darkblue;
+}
+.clearfix {
+    clear: both;
+}
+
+#main-right {
+    width: 54.5%;
+    overflow-y: scroll;
+    background: lightgray;
+}
+.heroL {
+    width: 95%;
+    height: 100%;
+    margin: 0 auto;
+    display: block;
+}
+
+.heroL .top {
+    height: 200px;
+    background: #454545;
+}
+
+.heroL .top .stars i.yellow {
+    color: gold;
+}
+.rate {
+    position: relative;
+}
+.heroL .top .stars i {
+    color: black;
+    font-size: 60px;
+    margin: 0 auto;
+}
+.heroL .top .stars {
+    display: block !important;
+    margin: 0 auto;
+    width: 300px;
+    float: none;
+}
+.heroL .top img {
+    border-radius: 50%;
+    display: block;
+    width: 100px;
+    margin: 60px auto 0 auto;
+}
+
+.heroL .bottom {
+    padding: 50px;
+}
+.teambtn {
+    padding-left: 5px;
+}
+.teambtn li {
+    color: white;
+    cursor: pointer;
+    background: cornflowerblue;
+    padding: 10px;
+    border-radius: 100px;
+    margin: 5px;
+}
+.teambtn li:hover {
+    background-color: royalblue;
+}
+.teambtn li a {
+    text-decoration: none;
+    color: white;
+}

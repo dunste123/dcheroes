@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=IM+Fell+Great+Primer');
+html, body {
+    margin: 0;
+    font-family: 'IM Fell Great Primer', serif;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+main {
+    flex: 1 0 auto;
+}
+header nav {
+    width: 100%;
+    background: dodgerblue;
+    color: whitesmoke;
+    padding-top: 10px;
+}
+header nav .nav-inner {
+    background: deepskyblue;
+    padding: 10px;
+}
+header nav .nav-inner .logo {
+    font-size: 50px;
+    color: whitesmoke;
+    text-decoration: none;
+}
+header nav .nav-inner .logo:hover {
+    color: antiquewhite;
+}
+
+.col {
+    display: grid;
+    padding: 4px;
+    width: 40.7%;
+    margin: 0;
+    max-height: 39em;
+    background: green;
+}
+.scroll {
+    overflow-y: scroll;
+}
+.menu-left {
+    width: 250px;
+}
+.right {
+    float: right;
+}
+.left {
+    float: left;
+}
+.clearfix {
+    clear: both;
+}
+

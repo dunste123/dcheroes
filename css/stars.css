@@ -1,0 +1,94 @@
+/* default.css */
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+/* Ratings widget */
+
+@font-face {
+    font-family: 'anudawitalic';
+    src: url('../fonts/anudi-webfont.woff2') format('woff2'),
+         url('../fonts/anudi-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'anudawregular';
+    src: url('../fonts/anudrg-webfont.woff2') format('woff2'),
+         url('../fonts/anudrg-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+form.frmRate {
+	margin: 10px auto;
+}
+
+.rate {
+    display: inline-block;
+    border: 0;
+    float: left;
+}
+/* Hide radio */
+.rate > input[type='radio'] {
+    display: none;
+}
+/* Order correctly by floating highest to the right */
+.rate > label.lblRating {
+    float: right;
+}
+
+/* The star of the show */
+.rate > label.lblRating:before {
+    display: inline-block;
+    font-size: 4.0rem;
+    padding: .3rem .2rem;
+    margin: 0;
+    cursor: pointer;
+    font-family: 'FontAwesome';
+    content: "\f005 "; /* full star */
+}
+/* Zero stars rating */
+.rate > label.lblRating:last-child:before {
+    content: "\f006 "; /* empty star outline */
+}
+/* Half star trick */
+.rate label.half:before {
+    content: "\f089 "; /* half star no outline */
+    position: absolute;
+    padding-right: 0;
+}
+/* Click + hover color */
+input:checked ~ label.lblRating, /* color current and previous stars on checked */
+label.lblRating:hover, label.lblRating:hover ~ label.lblRating /* color previous stars on hover */{
+	color: #ffd900;
+} 
+
+/* Hover highlights */
+input:checked + label.lblRating:hover, input:checked ~ label.lblRating:hover, /* highlight current and previous stars */
+input:checked ~ label.lblRating:hover ~ label.lblRating, /* highlight previous selected stars for new rating */
+label.lblRating:hover ~ input:checked ~ label.lblRating /* highlight previous selected stars */{
+	color: #f0cc00; 
+} 
+
+.divSubmit {
+	float: left;
+	display: block;
+	width: 250px;
+	height: 100%;
+}
+
+.divSubmit > input[type='submit'] {
+	width: 180px;
+	height: 60px;
+	font-family: anudawregular;
+	font-size: 20px;
+	border: 1px solid #000;
+}
+
+.divSubmit > input[type='submit']:hover {
+	background-color: #f0cc00;
+	color: #000000;
+	cursor: pointer;
+	border: 1px solid #000;
+}
