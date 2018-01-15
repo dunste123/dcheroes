@@ -81,7 +81,7 @@ function getCorrectHeroFromGetVariable() {
                 foreach ($things as $hero) {
                     echo "<div class='hero'>
                             <div class='image'>
-                                <img src='/" . str_replace("\\", "/", $hero->HERO_IMAGE) . "' />
+                                <img src='" . str_replace("\\", "/", $hero->HERO_IMAGE) . "' />
                             </div>
                             <div class='description'>
                                 <h3 class='nicefont'>$hero->HERO_NAME</h3>

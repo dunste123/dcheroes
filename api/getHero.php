@@ -36,7 +36,7 @@ foreach ($things as $hero) {
             <div class='top'>
                 <div class=\"stars\">$stars</div>
                 <h3 class='nicefont center'>$hero->HERO_NAME</h3>
-                <img src='/" . str_replace("\\", "/", $hero->HERO_IMAGE) . "' />
+                <img src='" . str_replace("\\", "/", $hero->HERO_IMAGE) . "' />
             </div>
             <div class='bottom'>
                 <h1 class='nicefont'>Info</h1>
