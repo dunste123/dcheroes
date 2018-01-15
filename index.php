@@ -44,7 +44,6 @@ function getCorrectHeroFromGetVariable() {
         <link rel="stylesheet" href="css/stars.css" />
         <link rel="stylesheet" href="css/style.css" />
 
-        <link rel="icon" href="img/icon/favicon.png" />
         <link href="img/icon/favicon.png" rel="icon" />
         <link href="img/icon/favicon.png" rel="shortcut icon" />
         <link href="img/icon/favicon.png" rel="apple-touch-icon" />
@@ -67,7 +66,7 @@ function getCorrectHeroFromGetVariable() {
                         <?php
                         $teams = $db->query("SELECT * FROM teams WHERE VISABLE = 1")->fetchAll(PDO::FETCH_OBJ);
                         foreach($teams as $team) {
-                            echo "<li onclick='window.location.replace(\"?team_id=$team->TEAM_ID&hero_id=-1\")'><a href='?team_id=$team->TEAM_ID&hero_id=-1'>$team->TEAM_NAME</a></li>";
+                            echo "<li class='btn' onclick='window.location.replace(\"?team_id=$team->TEAM_ID&hero_id=-1\")'><a href='?team_id=$team->TEAM_ID&hero_id=-1'>$team->TEAM_NAME</a></li>";
                         }
                         ?>
                     </ul>
@@ -87,7 +86,7 @@ function getCorrectHeroFromGetVariable() {
                             <div class='description'>
                                 <h3 class='nicefont'>$hero->HERO_NAME</h3>
                                 <p>$hero->HERO_DESCRIPTION</p>
-                                <a href='?team_id=$hero->TEAM_ID&hero_id=$hero->HERO_ID' onclick='getHeroById($hero->HERO_ID);return false;'>Read more</a>
+                                <a class='btn' href='?team_id=$hero->TEAM_ID&hero_id=$hero->HERO_ID' onclick='getHeroById($hero->HERO_ID);return false;'>Read more</a>
                             </div>
                             <div class='clearfix'></div>
                           </div>";

@@ -86,16 +86,16 @@ body {
 .hero .description a {
     text-align: center;
     display: block;
-    color: white;
     text-decoration: none;
-    background: dodgerblue;
+    /*color: white;
+    background: cornflowerblue;
+    border-radius: 20px;
+    padding: 10px 20px;*/
     width: 100px;
     margin: 0 auto;
-    border-radius: 20px;
-    padding: 10px 20px
 }
 .hero .description a:hover {
-    background: darkblue;
+    background: royalblue;
 }
 .clearfix {
     clear: both;
@@ -104,6 +104,7 @@ body {
 #main-right {
     width: 54.5%;
     overflow-y: scroll;
+    overflow-x: hidden;
     background: lightgray;
 }
 .heroL {
@@ -139,7 +140,7 @@ body {
     border-radius: 50%;
     display: block;
     width: 100px;
-    margin: 60px auto 0 auto;
+    margin: 20px auto 0 auto;
 }
 
 .heroL .bottom {
@@ -149,17 +150,26 @@ body {
     padding-left: 5px;
 }
 .teambtn li {
-    color: white;
-    cursor: pointer;
-    background: cornflowerblue;
-    padding: 10px;
-    border-radius: 100px;
     margin: 5px;
-}
-.teambtn li:hover {
-    background-color: royalblue;
 }
 .teambtn li a {
     text-decoration: none;
     color: white;
+}
+
+.btn:hover {
+    background-color: royalblue !important;
+}
+.btn {
+    border: none !important;
+    color: white !important;
+    cursor: pointer;
+    outline: none !important;
+    background: cornflowerblue;
+    padding: 10px;
+    border-radius: 100px;
+}
+
+.center {
+    text-align: center;
 }

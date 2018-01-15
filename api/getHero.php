@@ -35,6 +35,7 @@ foreach ($things as $hero) {
     echo "<div class='heroL'>
             <div class='top'>
                 <div class=\"stars\">$stars</div>
+                <h3 class='nicefont center'>$hero->HERO_NAME</h3>
                 <img src='/" . str_replace("\\", "/", $hero->HERO_IMAGE) . "' />
             </div>
             <div class='bottom'>
@@ -47,8 +48,7 @@ foreach ($things as $hero) {
                 <p>$hero->HERO_POWERS</p>
                 
                 <br />
-                <h1 class='nicefont'>Rate your hero</h1>
-                <p>Form to be placed here</p>
+                <h1 class='nicefont'>Rate this hero</h1>
                 <form action='?team_id=$hero->TEAM_ID&hero_id=$hero->HERO_ID&rate=true' method='post' class='frmRate'>
                     <fieldset>
                         <div class=\"rate\">
@@ -67,8 +67,8 @@ foreach ($things as $hero) {
                         <div class=\"clearfix\"></div>
                         <br />
                         <div class=\"divSubmit\">
-                        <textarea name='ratingReview' id='ratingReview' cols='40' rows='10'></textarea>
-                            <input type=\"submit\" name=\"submitRating\" value=\"Rate Hero\"/>
+                        <textarea name='ratingReview' id='ratingReview' cols='40' rows='10' required></textarea>
+                            <input type=\"submit\" name=\"submitRating\" class='btn' value=\"Rate Hero\"/>
                             <input type=\"hidden\" name=\"heroId\" value=\"$hero->HERO_ID\"/>
                         </div>
                     </fieldset>
