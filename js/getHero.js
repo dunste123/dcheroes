@@ -3,7 +3,7 @@ function getHeroById(heroId) {
     const ajax = new XMLHttpRequest();
     let data = new FormData();
     data.append("hero_id", heroId);
-    ajax.open("POST", "/api/getHero_HTML.php", true);
+    ajax.open("POST", "api/getHero_HTML.php", true);
     ajax.onreadystatechange = (t) => {
         console.log(t);
         if(ajax.readyState === 4) {
@@ -16,7 +16,7 @@ function getHeroById(heroId) {
 function getHeroesForTeam(teamId) {
     //for some reason I can't reuse these :(
     const ajax = new XMLHttpRequest();
-    ajax.open("GET", `/api/heroes.php?team_id=${teamId}`, true);
+    ajax.open("GET", `api/heroes.php?team_id=${teamId}`, true);
     ajax.onreadystatechange = () => {
         if(ajax.readyState === 4) {
             let jsonData = JSON.parse(ajax.responseText);

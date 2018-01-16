@@ -1,4 +1,5 @@
 <?php
+/* NP!oGEX^.}=Z */
 if( isset($_GET["team_id"]) && !empty($_GET["team_id"])) {
     require("../php_includes/db.php");
     $k = $db->prepare("SELECT * FROM heroes WHERE TEAM_ID=:id");
