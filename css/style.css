@@ -66,10 +66,13 @@ body {
 .hero .description {
     text-align: center;
     float: left;
-    background: dimgray;
+    background: slategrey;
     height: 250px;
     width: 250px;
     /*width: 62%;*/
+}
+.hero:nth-child(even) .description {
+    background: dimgrey;
 }
 .hero .description h3 {
     color: dodgerblue;

@@ -62,14 +62,17 @@ function getCorrectHeroFromGetVariable() {
 
             <div class="col" id="main-left">
                 <h1 class='nicefont'>Teams</h1>
+                <nav>
                     <ul class='teambtn'>
                         <?php
                         $teams = $db->query("SELECT * FROM teams WHERE VISABLE = 1")->fetchAll(PDO::FETCH_OBJ);
                         foreach($teams as $team) {
-                            echo "<li class='btn' onclick='window.location.replace(\"?team_id=$team->TEAM_ID&hero_id=-1\")'><a href='?team_id=$team->TEAM_ID&hero_id=-1'>$team->TEAM_NAME</a></li>";
+                            $hero_count = $db->query("SELECT COUNT(HERO_ID) AS HERO_COUNT FROM heroes WHERE TEAM_ID=$team->TEAM_ID")->fetchAll(PDO::FETCH_OBJ)[0];
+                            echo "<li class='btn' onclick='window.location.replace(\"?team_id=$team->TEAM_ID&hero_id=-1\")'><a href='?team_id=$team->TEAM_ID&hero_id=-1'>$team->TEAM_NAME ($hero_count->HERO_COUNT)</a></li>";
                         }
                         ?>
                     </ul>
+                </nav>
             </div>
 
             <div class="col" id="main-center">
