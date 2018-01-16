@@ -76,7 +76,7 @@ function getCorrectHeroFromGetVariable() {
             </div>
 
             <div class="col" id="main-center">
-                <?php $things = $db->prepare("SELECT * FROM heroes WHERE TEAM_ID=:id");
+                <?php /*$things = $db->prepare("SELECT * FROM heroes WHERE TEAM_ID=:id");
                 $things->execute([
                     'id' => isset($_GET['team_id']) && !empty($_GET['team_id']) ? $_GET['team_id'] : 1
                 ]);
@@ -93,7 +93,7 @@ function getCorrectHeroFromGetVariable() {
                             </div>
                             <div class='clearfix'></div>
                           </div>";
-                }
+                }*/
                 ?>
             </div>
 
@@ -102,6 +102,9 @@ function getCorrectHeroFromGetVariable() {
         </main>
         <script src="https://use.fontawesome.com/3ae13c09d4.js"></script>
         <script src="js/getHero.js"></script>
-        <script>getHeroById(<?php echo getCorrectHeroFromGetVariable(); ?>);</script>
+        <script>
+            getHeroById(<?php echo getCorrectHeroFromGetVariable(); ?>);
+            getHeroesForTeam(<?php echo isset($_GET['team_id']) && !empty($_GET['team_id']) ? $_GET['team_id'] : 1; ?>);
+        </script>
     </body>
 </html>

@@ -45,15 +45,13 @@ foreach ($things as $hero) {
                 <br />
                 
                 <h1 class='nicefont'>Powers</h1>
-                <p>
-                    <ul id='hero-power'>
-                    ";
-                    foreach (json_decode($hero->HERO_POWERS) as $POWER) {
-                        echo "<li>$POWER</li>";
-                    }
-                    echo"
-                    </ul>
-                </p>
+                <ul id='hero-power'>
+                ";
+                foreach (json_decode($hero->HERO_POWERS) as $POWER) {
+                    echo "<li>$POWER</li>";
+                }
+                echo"
+                </ul>
                 
                 <br />
                 <h1 class='nicefont'>Rate this hero</h1>
