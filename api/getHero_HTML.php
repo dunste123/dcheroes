@@ -11,9 +11,13 @@ foreach ($things as $hero) {
         'id' => $_POST['hero_id']
     ]);
     $rating = $rating->fetchAll(PDO::FETCH_OBJ);
+    $reviews = "";
     $totalRate = 0;
     foreach ($rating as $rate) {
         $totalRate += $rate->rating;
+        $reviews .= "<div class='comment'>
+                        <p>$rate->ratingReview</p>
+                     </div>";
     }
     $yellowStars = 0;
     if($totalRate != 0) {
@@ -79,6 +83,8 @@ foreach ($things as $hero) {
                         </div>
                     </fieldset>
                 </form>
+                <h2 class='nicefont'>Comments: </h2>
+                $reviews
             </div>
           </div>";
 }

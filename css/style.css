@@ -176,3 +176,9 @@ body {
 .center {
     text-align: center;
 }
+
+.comment {
+    border: black solid thin;
+    margin: 5px;
+    padding: 5px;
+}
