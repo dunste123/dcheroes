@@ -25,7 +25,7 @@ $hero = $heroQuery->fetch(PDO::FETCH_OBJ);
 $hero->RATING = 0;
 $hero->COMMENTS =  [];
 
-$ratingQuery = $db->prepare('SELECT * FROM rating WHERE heroId = :id');
+$ratingQuery = $db->prepare('SELECT * FROM rating WHERE heroId = :id ORDER BY ratingId DESC');
 $ratingQuery->execute([
     'id' => $heroId,
 ]);
